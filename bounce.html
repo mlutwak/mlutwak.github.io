@@ -4,6 +4,7 @@
 <h1> Bounce </g1>
 <h2> what </h2>
 A bounce is when you jump or otherwise get launched away from a 1u (under certain circumstances 2u) tele due to a floating point error causing you to "pseudo-land" 1 tick before coming into contact with the ground.
+
 There are many different terms for this:
 <ul>
 <li>Uncrouched Bounce: a rocket hits the ground on the same tick as you pseudo-land, uncrouched</li>
@@ -13,8 +14,11 @@ There are many different terms for this:
 </ul>
 <h2>how</h2>
 For normal bounces, you need to fire the rocket such that it reaches the ground at the same time as you. Since players fall &#8733; t^2 and rockets move at a constant velocity, this means that you need to fire at the same time as you land for short distances, and before you hit 1100ups if you reach that speed.
+
 Note that crouched bounces usually send the player too high to stabilize and pogo afterwards, but uncrouched bounces and bhops are fine.
+
 For bouncehops, most players will bind +jump to mwheeldown and mwheelup. This is not consistent, but is enough when only one is needed and/or it's not too far into a jump.
+
 For PBs, you'll want to use spacebar instead of the mousewheel since you also need to time the crouch/shoot inputs to go right after the bhop.
 <h2>why</h2>
 Some jumps are designed for these tricks, others are easier with them (mostly wallpogo maps). Any time you see a 1u tele on a hard/long jump, check if there are any convenient setups.
@@ -22,6 +26,7 @@ Some jumps are designed for these tricks, others are easier with them (mostly wa
 <h1>Setups</h1>
 <h2>what</h2>
 In order to bounce, you must spend the tick immediately before landing between 1-2u above the ground. Since the game runs at 66 ticks/second and units are fairly small (soldier ground speed is 240u/s), most of the time you won't be able to do a bounce.
+
 Since gravity is constant (until 3500u/s in any given axis), it is possible to say that certain <i>heights</i> are bounceable; if you walk off of a ledge that's exactly 691u over the ground (690u over the tele), you will always be able to do an uncrouched bounce (or bhop). This is very important! Consider all the ways that you can manipulate your starting position, or alternatively, the apex of your jump or the point you start falling after anything that sets your y velocity to 0:
 <ul>
 <li>Walk off</li>
@@ -62,7 +67,10 @@ With any rocket launcher, given the vertical distance between the start and end,
 
 <h1>Jumpbugs</h1>
 The jump bug (JB) has been in source/gldsrc games for a long time. When you uncrouch in the air, you instantaneously go from your crouched collision hull to your uncrouched collision hull. We only care about the bottom face of that box, which moves down about 7 units in that tick. If you uncrouch into a bounce height (1-2u off the ground), you can jump (or do a normal bounce). This can "penetrate" a much higher tele; always at least 6u. The limit for how high of a tele this works on comes from the maximum upward speed a jump can give you; otherwise you hit the tele on the way up.
+
 Note, you can't do a crouched PB from a JB; the requirement that you uncrouch at the same time as jumping delays the next crouch.
+
+Also, a jumpbug (regardless of whether or not it's from a bounce height!) will negate all fall damage.
 
 <h2>Jumpbug heights</h2>
 Any uncrouched bounce height is also a JB height. Additionally, those JB heights extend an extra unit shallower (e.g. 1202-1202.99 is a walkoff uncrouched bounce; anything from 1201-1202.99 is a walkoff jumpbug).

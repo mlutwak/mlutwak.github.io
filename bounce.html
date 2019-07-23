@@ -3,7 +3,7 @@
 </header>
 <h1> Bounce </g1>
 <h2> what </h2>
-A bounce is when you jump or otherwise get launched away from a 1u (under certain circumstances 2u) tele due to a floating point error causing you to "pseudo-land" 1 tick before coming into contact with the ground.
+A bounce is when you jump or otherwise get launched away from a 1u (under certain circumstances 2u) tele due to a design decision to "pseudo-land" when 1-3u above the ground. This "pseudo-land" allows you to perform grounded actions without touching the ground, like jumping and walking.
 
 There are many different terms for this:
 <ul>
@@ -25,7 +25,7 @@ Some jumps are designed for these tricks, others are easier with them (mostly wa
 
 <h1>Setups</h1>
 <h2>what</h2>
-In order to bounce, you must spend the tick immediately before landing between 1-2u above the ground. Since the game runs at 66 ticks/second and units are fairly small (soldier ground speed is 240u/s), most of the time you won't be able to do a bounce.
+In order to bounce, you must spend a tick before landing between 1-3u above the ground. Since the game runs at 66 ticks/second and units are fairly small (soldier ground speed is 240u/s), most of the time you won't be able to do a bounce.
 
 Since gravity is constant (until 3500u/s in any given axis), it is possible to say that certain <i>heights</i> are bounceable; if you walk off of a ledge that's exactly 691u over the ground (690u over the tele), you will always be able to do an uncrouched bounce (or bhop). This is very important! Consider all the ways that you can manipulate your starting position, or alternatively, the apex of your jump or the point you start falling after anything that sets your y velocity to 0:
 <ul>
@@ -82,3 +82,10 @@ Note: bounce heights are noticeably "denser" at low speeds/starting heights. For
 
 <h2>Random PB from pogo</h2>
 The most consistent/useful setup for a random bounce is to pogo in place, attempting to jump->crouch and shoot on consecutive ticks just before landing. If you time it too early, you'll just continue pogoing. Pogoing in place keeps the bottom face of your collision hull about 100-150u from the ground, so the odds of pogoing to a bounce height are about 1/7.
+
+
+
+<footer>
+<p>Sources</p>
+<p>https://www.youtube.com/watch?time_continue=235&v=fSpHs0yWeCQ</p>
+</footer>

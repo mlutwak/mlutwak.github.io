@@ -1,0 +1,38 @@
+<header>
+<a href="http://eldritch.goblin.tips/index.html">back to index</a>
+</header>
+<h1>Wallbug</h1>
+<h2>what</h2>
+The wall bug is another floating point error in Source. Player collision hulls are always axis-aligned, but other collision surfaces don't need to be; an attempt at "smoothing" movement around such surfaces results in intermittent clipping. When you clip into a wall this way (when you wallbug), all momentum is canceled. Some wallbugs are "stable", allowing you to hold strafe keys (or none at all) and not move until you choose to; others will only instantaneously halt you.<br /><br />
+Types:
+<ul>
+<li>Angled wall</li>
+<li>Texture (func_brush)</li>
+<li>Coordinate</li>
+<li>Mystery Turbo Wallbugs</li>
+</ul>
+
+<h3>Angled wall</h3>
+These are the most common, the most consistent, and the most relevant. Any wall which is parallel to the Y axis (vertical) and angled (not parallel to the X or Z axes) can be wallbugged with some consistency. Generally, walls very close to parallel or 45 degrees are the "easiest" to wallbug on, but many (porrly understood) factors go into why some walls are better than others.<br /><br />
+<h3>Texture</h3>
+In Hammer, a func_brush allows the mapmaker to group a number of brushes (simple map primitives) into one larger object to improve performance/organization. At the boundaries between multiple brushes in a func_brush (usually distinguished by a texture change), the player may sometimes wallbug instantaneously. This is what causes wallbugs while pogoing, and what makes a few hole jumps possible (jump_how notably).<br /><br />
+<h3>Coordinate</h3>
+Walls, even axis-aligned walls, which are near a power of 2 units from the map origin cause wallbugs. cp_gullywash has a number of these around the midpoint.
+<h3>Specific Turbo Walls</h3>
+<ul>
+<li>Diabarha last, inner hexagon wall 10 o'clock from the "16"</li>
+<li>Strikapult L4, right angled wall after the catapult</li>
+</ul>
+
+<h2>how</h2>
+In general, the best way to get a consistent wallbug is to angle the camera slightly off perpendicular (e.g. a few degrees right of center) and hold two strafe keys into the wall (in the example, W+A). If you minimize your <i>parallel</i> velocity, this will usually work on an angled wall. If it doesn't, change the angle slightly. For flat wallbugs, you will either be pogoing against a func_brush boundary or attempting to sync into one; atempt to strafe at an angle into the wall. Depending on how powerful of a wall it is, it might take a couple of tries or 20+ on average.<br /><br />
+Once you stick to a wall stabily, you can usually drop lower with very little effort.
+
+<h2>why</h2>
+Usually, halting downward momentum just before starting a fast wallclimb. Also, wallpogo/wallshots on angled walls give noticeably less speed, so wallbugs are sometimes necessary for completion. If you intend to start a pogo out of a wallbug (e.g. jump_edgebug last), keep in mind that you start with zero velocity up or down; it's easy to launch yourself too high.
+
+<footer>
+<p>Sources</p>
+<p>Types: https://jump.tf/forum/index.php/topic,2462.msg20797.html#msg20797</p>
+<p>Coordinate wallbugs: https://jump.tf/forum/index.php/topic,2065.msg16718.html#msg16718</p>
+</footer>

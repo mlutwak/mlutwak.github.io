@@ -66,9 +66,11 @@ An "angle bhop" abuses the fact that
 With any rocket launcher, given the vertical distance between the start and end, there is at least one angle range that you can shoot at while standing xor crouched such that you reach a bounce height. These ranges are typically small (+/- 0.02 degrees vertical), and so you'll want a toggle bind to go down to extremely low sens for the setup. Generally, other special starts are easier and faster, moreso if loadout swap binds are used to utilize multiple rocket launcher's options.
 
 <h1>Jumpbugs</h1>
-The jump bug (JB) has been in source/gldsrc games for a long time. When you uncrouch in the air, you instantaneously go from your crouched collision hull to your uncrouched collision hull. We only care about the bottom face of that box, which moves down about 7 units in that tick. If you uncrouch into a bounce height (1-2u off the ground), you can jump (or do a normal bounce). This can "penetrate" a much higher tele; always at least 6u. The limit for how high of a tele this works on comes from the maximum upward speed a jump can give you; otherwise you hit the tele on the way up.
+The jump bug (JB) has been in source/goldsrc games for a long time. When you uncrouch in the air, you instantaneously go from your crouched collision hull to your uncrouched collision hull. We only care about the bottom face of that box, which moves down about 7 units in that tick. If you uncrouch into a bounce height (1-2u off the ground), you can jump (or do a normal bounce). This can "penetrate" a much higher tele; always at least 6u. The limit for how high of a tele this works on comes from the maximum upward speed a jump can give you; otherwise you hit the tele on the way up.
 
 Note, you can't do a crouched PB from a JB; the requirement that you uncrouch at the same time as jumping delays the next crouch.
+
+People usually use <a href="http://eldritch.goblin.tips/scripts/jumpbug.cfg">this script</a> to automate the 1 tick uncrouch/jump.
 
 Also, a jumpbug will negate all fall damage.
 

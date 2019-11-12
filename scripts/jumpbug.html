@@ -1,0 +1,10 @@
+<header>
+<a href="http://eldritch.goblin.tips/index.html">back to index</a>
+</header>
+<code>
+// toggles crouch, makes space uncrouch and jump
+alias jumpbug "+duck; bind space +jumpbugjump"
+alias +jumpbugjump "-duck; +jump"
+alias -jumpbugjump "-jump; bind space +jump"
+bind c "jumpbug"
+</code>
